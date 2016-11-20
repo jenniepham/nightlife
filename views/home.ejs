@@ -1,6 +1,6 @@
 <html ng-app="vote">
 <head>
-  <title>Pick Me!</title>
+  <title>Dragg!</title>
   <link rel="stylesheet" href="bootstrap.min.css">
   <link rel="stylesheet" href="index.css" media="screen">
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
@@ -19,7 +19,7 @@
     <div class="wordbuttons">
      <% if (user) { %>
      <a href="/home">dashboard</a>
-     <a href="/polls">polls</a>
+     <a href="/bars">local bars</a>
      <% } %>
      <% if (!user) { %>
         <a href="/login">log-in</a>
@@ -35,31 +35,13 @@
 </div>
 
 <div class="appBody">
- <div class="yourPolls">
-   <p class="pollTitle">Your Polls</p>
-   <div id="addUserPollsHere"> <ul>
-<% for(var i=0; i<data.length; i++) {%>
-   <li><a class="userPollItems" href="/<%=data[i]._id%>"><%= data[i]["question"] %></a><a onclick='return confirm("Are you sure?")' class="userPollDelete" href="/delete/<%=data[i]._id%>">--Delete--</a></li>
-<% } %>
-</ul>
-   </div>
- </div>
- <div class="pollForm">
-     <p class="pollTitle">New Poll</p>
-   <form method="post" action="/home/form" id="pollForm">
-     <p class="formsubtext"><b>Question</b></p>
-     <input type="text" name="question"</input><br>
-     <p class="formsubtext"><b>Options</b></p>
-     <input type="text" name="option1"></input><br>
-   </form>
-   <button id="addOption"><center>+ option</center></button>
-   <button id="removeOption"><center>x option</center></button>
-   <button id="submit"><center>create poll</center></button>
-     
-   
-   
 
- </div>
+<div class='sectionTitle'>
+    Events I'm going to:
+</div>
+<div class='myEvents'>
+    
+</div>
 
 </div>
 

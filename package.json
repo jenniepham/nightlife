@@ -1,7 +1,7 @@
 {
-  "name": "pickmevote",
+  "name": "dragg",
   "version": "1.0.0",
-  "description": "Voting app for FCC",
+  "description": "Nightlife app for FCC",
   "main": "server.js",
   "dependencies": {
     "async": "^0.2.10",
@@ -21,7 +21,8 @@
     "passport": "^0.3.2",
     "passport-local": "^1.0.0",
     "passport-twitter": "^1.0.4",
-    "socket.io": "^0.9.17"
+    "socket.io": "^0.9.17",
+    "yelp": "^1.0.1"
   },
   "devDependencies": {},
   "scripts": {
@@ -29,12 +30,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jenniepham/voting_app.git"
+    "url": "https://github.com/jenniepham/nightlife"
   },
   "author": "jennie",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/jenniepham/voting_app/issues"
+    "url": "https://github.com/jenniepham/nightlife/issues"
   },
-  "homepage": "https://github.com/jenniepham/voting_app#readme"
+  "homepage": "https://github.com/jenniepham/nightlife#readme"
 }

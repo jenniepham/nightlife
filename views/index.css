@@ -1,7 +1,11 @@
+body{
+  background-color: #FFF;
+}
+
 .header {
-  height: 60px;
+  height: 100px;
   width: 100%;
-  background-color: #555555;
+  background-color: #380744;
 }
 
 .header-buttons{
@@ -28,8 +32,19 @@
   margin-right: 30px;
 }
 
+.indexbuttons>a{
+  color: #FFF;
+  font-family: Oswald;
+  font-size: 20px;
+  margin: 15px;
+}
+
 .wordbuttons{
-  transform: translateY(10px);
+  transform: translateY(25px);
+}
+
+.indexbuttons{
+  transform: translateY(25px);
 }
 
 .wordbuttons>p{
@@ -50,270 +65,69 @@
   font-size: 18px;
 }
 
+.indexText{
+  color: #380744;
+}
+
 #logo{
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
-.yourPolls{
-float: left;
-width: 50%;
-
-
-}
-
-.pollForm{
-  float:left;
-  width: 50%;
-  border-left: 2px solid #555;
-}
-
-input{
-  margin-top: 0px;
-  margin-bottom: 5px;
-  margin-left: 10px;
-  width: 80%;
-}
-
-.loginForm{
-  float:left;
+.searchInput{
   width: 50%;
 }
 
-.loginInput{
-  margin-bottom: 5px;
-  margin-left: 0px;
-  width: 50%;
+.banner{
+  background-image: url('images/banner.png');
+  width: 600px;
+  height: 480px;
 }
 
-.loginSubmit{
-  margin-top: 5px;
-  margin-left: 10px;
-  width: 30%;
-  background-color: #56b9ea;
-  color: #FFF;
-  outline: none;
-  border-radius: 10px;
-  border: none;
+.searchResult{
+  margin-top: 70px;
 }
 
-#addOption{
-margin-left: 10px;
-width: 100px;
-background-color: #51db54;
-color: #FFF;
-outline: none;
-border-radius: 10px;
-border: none;
-}
-
-#removeOption{
-
-  margin-left: 10px;
-  width: 100px;
-  background-color: #e95376;
-  color: #FFF;
-  outline: none;
-  border-radius: 10px;
-  border: none;
-
-}
-
-#submit{
-  margin-left: 10px;
-  width: 150px;
-  background-color: #56b9ea;
-  color: #FFF;
-  outline: none;
-  border-radius: 10px;
-  border: none;
-}
-
-.signupTitle{
-  font-size: 36px;
-  font-family: Oswald;
-  color: #e95376;
-  width: 50%;
+.entry{
+  
+  width: 65%;
+  height: 150px;
   text-align: left;
   
 }
 
-.loginTitle{
-  font-size: 36px;
-  font-family: Oswald;
-  width: 50%;
-  text-align: left;
-  color: #51db54;
-  
-  
-}
-
-.subtext{
-  font-size: 12px;
-  padding-bottom: 0px;
-  width: 50%;
-  text-align: left;
-  margin-bottom: 0px;
-}
-
-.username{
-  float:right;
-}
-
-.pollTitle{
-  font-size: 36px;
-  font-family: Oswald;
-  text-align: left;
-  margin-left: 10px;
-}
-
-.formsubtext{
-  font-size: 14px;
-  padding-bottom: 0px;
-  width: 50%;
-  text-align: left;
-  margin-bottom: 0px;
-  margin-left: 10px;
-}
-
-
-#addUserPollsHere{
-  width: 100%;
-}
-
-.userPollItems{
-  color: #56b9ea;
-  outline: none;
-}
-
-.pollChoices{
+.entryIMG{
   float:left;
-  width: 30%;
 }
 
-.pollDisplay{
+.entryTEXT{
   float:left;
-  width: 70%;
-}
-
-select{
   margin-left: 10px;
-  width: 50%;
+  width: 85%;
 }
 
-.optionSubtext{
-  margin-left: 10px;
-  font-family: Lato;
+.entryTEXT>a{
+  color: #380744;
+}
+
+
+@media screen and (max-width: 600px) {
+  
+ .banner{
+  background-image: url('images/banner400.png');
+  width: 400px;
+  height: 320px;
+} 
   
 }
 
-.removePoll{
-  margin-top: 5px;
-  margin-left: 10px;
-  width: 30%;
-  background-color: #e95376;
-  color: #FFF;
-  outline: none;
-  border-radius: 10px;
-  border: none;
-}
-
-.userPollDelete{
-  font-size:11px;
-  color: #e95376;
-  outline: none;
-  margin-left: 5px;
-}
-
-#ownChoice{
-width: 30%;
-margin-left: 10px;
-background-color: #51db54;
-color: #FFF;
-outline: none;
-border-radius: 10px;
-border: none;
-margin-bottom: 5px;
-margin-top: 5px;
-}
-
-#otherInput{
-  width: 50%;
-}
-
-@media screen and (max-width: 1500px) {
-
- .appbody{
-   width: 95%;
- }
- .header-buttons{
-   width: 95%;
- }
- 
- .loginForm{
-  float:left;
-  width: 70%;
+@media screen and (max-width: 400px) {
   
+ .banner{
+  background-image: url('images/banner300.png');
+  width: 300px;
+  height: 240px;
+} 
   
-}
-
-.signupTitle{
-  font-size: 30px;
-
-}
-
-
-.loginTitle{
-  font-size: 30px;
-
-}
-}
-
-@media screen and (max-width: 1000px) {
-
- .appbody{
-   width: 95%;
- }
- .header-buttons{
-   width: 95%;
- }
- 
- .loginForm{
-  float:none;
-  width: 100%;
-  
-  
-}
-
-.signupTitle{
-  font-size: 30px;
-
-}
-
-
-.loginTitle{
-  font-size: 30px;
-
-}
-
-.pollChoices{
-  float:none;
-  width: 100%;
-}
-
-.pollDisplay{
-  float:none;
-  width: 100%;
-}
-}
-
-@media screen and (max-width: 500px) {
-
- .header {
-  height: 90px;
-  width: 100%;
-  background-color: #555555;
-}
-}
 }

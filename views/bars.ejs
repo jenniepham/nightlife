@@ -1,6 +1,6 @@
 <html ng-app="vote">
 <head>
-    <title>Pick Me!</title>
+  <title>Dragg!</title>
   <link rel="stylesheet" href="bootstrap.min.css">
   <link rel="stylesheet" href="index.css" media="screen">
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
@@ -19,9 +19,8 @@
     <div class="wordbuttons">
      <% if (user) { %>
      <a href="/home">dashboard</a>
+     <a href="/bars">local bars</a>
      <% } %>
-     <a href="/polls">polls</a>
-     <a href="/popular">popular</a>
      <% if (!user) { %>
         <a href="/login">log-in</a>
      <% } %>
@@ -37,14 +36,39 @@
 
 <div class="appBody">
 
-   <p class="pollTitle">Popular Polls</p>
-   <div id="addUserPollsHere"> <ul>
-<% for(var i=0; i<data.length; i++) {%>
-   <li><a class="allPoll" href="/<%=data[i]._id%>"><%= data[i]["question"] %></a></li>
-<% } %>
-</ul>
-   </div>
- </div>
+<div class='sectionTitle'>
+    <% if (user.location) {%>
+    Local bars in
+    <b><%=user.location%></b>
+    <% } %>
+    <% if (!user.location) {%>
+    <form method='post' action=''>
+        Enter your location to view bars in your area<br>
+    <input name='locationInput' type='text'></input>
+    <input type='submit' value='submit'></input>
+    </form>
+    <% } %>
+</div>
+
+
+<div class='searchResult'>
+    
+   <% data.forEach(function(a){%>
+       
+       <div class='entry'>
+           <div class='entryIMG'><img src='<%=a.image_url%>'></div>
+           <div class='entryTEXT'>
+               <a target='_blank' href='<%=a.url%>'><b><%=a.name%></a></b>
+               <img src='<%=a.rating_img_url_small%>'><br>
+               <%=a.location.address%> - <%=a.location['postal_code']%> (<%=a.phone%>)<br>
+               <%=a['snippet_text']%>
+           </div>
+       </div>
+       
+   <% }) %>
+
+</center>
+</div>
 
 
 </div>

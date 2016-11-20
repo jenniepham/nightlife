@@ -1,0 +1,66 @@
+<html ng-app="vote">
+<head>
+  <title>Dragg!</title>
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <link rel="stylesheet" href="index.css" media="screen">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+</head>
+<body>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script type="text/javascript" src="js/search.js"></script>
+
+
+
+<div class="header">
+  <div class="header-buttons">
+    <div class='logo'>
+     <a href="/"><img src="images/logo-small.png"></a>
+    </div>
+    <div class="wordbuttons">
+     <% if (user) { %>
+     <a href="/home">dashboard</a>
+     <a href="/bars">local bars</a>
+     <% } %>
+     <% if (!user) { %>
+        <a href="/login">log-in</a>
+     <% } %>
+     <% if (user) { %>
+        <a href="/logout">log-out</a>
+        <p id="username">Hi, <%= user.local.username %></p>
+     <% } %>
+     
+    </div>
+
+ </div>
+</div>
+
+<div class="appBody"><center>
+
+    <b>Search again for a different location</b><br>
+         
+    <input id='searchLoc' class='searchInput' type='text' placeholder='i.e Austin Texas'></input> <button id='draggButton'>Dragg</button>
+    
+    <div class='searchResult'>
+    
+   <% data.forEach(function(a){%>
+       
+       <div class='entry'>
+           <div class='entryIMG'><img src='<%=a.image_url%>'></div>
+           <div class='entryTEXT'>
+               <a target='_blank' href='<%=a.url%>'><b><%=a.name%></a></b>
+               <img src='<%=a.rating_img_url_small%>'><br>
+               <%=a.location.address%> - <%=a.location['postal_code']%> (<%=a.phone%>)<br>
+               <%=a['snippet_text']%>
+           </div>
+       </div>
+       
+   <% }) %>
+
+</center>
+</div>
+
+
+
+</body>
+</html>

@@ -9,6 +9,8 @@ var morgan       = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser   = require('body-parser');
 var session      = require('express-session');
+var favicon  = require('serve-favicon');
+app.use(favicon(__dirname + '/views/favicon.ico'));
 
 mongoose.connect(process.env.MONGO_URL);
 require('./config/passport')(passport);
@@ -24,7 +26,7 @@ app.use(passport.session()); // persistent login sessions
 app.use(flash());
 require('./app/routes/login.js')(app,passport);
 require('./app/routes/site.js')(app);
-require('./app/routes/poll.js')(app);
+require('./app/routes/search.js')(app);
 
 
 

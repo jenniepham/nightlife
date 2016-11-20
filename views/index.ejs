@@ -1,47 +1,66 @@
 <!DOCTYPE html>
 <html ng-app="vote">
 <head>
-    <title>Pick Me!</title>
+    <title>Dragg</title></title>
   <link rel="stylesheet" href="bootstrap.min.css">
   <link rel="stylesheet" href="index.css" media="screen">
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
 </head>
 <body>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script type='text/javascript' src='js/index.js'></script>
 
-
-  <div class="header">
-    <div class="header-buttons">
-      <div class='logo'>
-       <a href="/"><img src="images/logo-small.png"></a>
-      </div>
+<div class="header">
+    <div class="header-buttons"><center>
       <div class="wordbuttons">
-       <% if (user) { %>
-       <a href="/home">dashboard</a>
-       <% } %>
-       <a href="/polls">polls</a>
+     <% if (user) { %>
+        <p id="username">Hi, <%= user.local.username %></p>
+     <% } %>
+     </center>
+      </div>
+
+   </div>
+  </div>
+<div style='background-color:#380744'>
+        <center>
+    <div class='banner'></div>
+</div>
+<div class="header">
+    <div class="header-buttons"><center>
+      <div class="indexbuttons">
+      <% if (user) { %>
+        <a href="/home">dashboard</a>
+        <a href="/bars">local bars</a>
+     <% } %>
        <% if (!user) { %>
         <a href="/login">log-in</a>
      <% } %>
      <% if (user) { %>
         <a href="/logout">log-out</a>
-        <p id="username">Hi, <%= user.local.username %></p>
      <% } %>
+     </center>
       </div>
 
    </div>
   </div>
 
+<div class="appBody"><center>
+    <div class='indexText'>
+    <p>Find bars around your area. <b><i>Dragg</i></b> your friends with you.</p><br><br>
+    </div>
+    
+    
+        <b>Enter a location</b><br>
+         
+        <input id='searchLoc' class='searchInput' type='text' placeholder='i.e Austin Texas'></input> <button id='draggButton'>Dragg</button>
+    
+    <div id='result'>
+        
+    </div>
 
-<div class="appBody">
-<img id="logo" src="images/logo.png"></img>
-<center><br>
-<p>Pick me, pick me, pick me! Make polls about the things that you care about.</p>
-<p>And vote to voice your opinion!Let us know what you think.</p>
-<p>Who is your dream girl? Who keeps making you very very very crazy?<p>
-<p>*must be user to create poll, non-users can only vote</p>
-  <br><br><br><br><br>
-<p>GitHub: <a href="https://github.com/jenniepham/voting_app">https://github.com/jenniepham/voting_app</a>
+<br><br><br><br>
+<p><a href="https://github.com/jenniepham/nightlife">Github</a></p>
 </center>
 </div>
 
