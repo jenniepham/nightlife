@@ -8,9 +8,13 @@ var barSchema = mongoose.Schema({
   
     name: String,
     url: String,
-    rating: Number,
+    rating: String,
     snippet: String,
-    img: String
+    img: String,
+    phone: String,
+    address: String,
+    zipcode: String,
+    attendance: Array
     
 
 });

@@ -27,14 +27,14 @@ body{
 
 .wordbuttons>a{
   color: #FFF;
-  font-family: Oswald;
+  font-family: Play;
   font-size: 20px;
   margin-right: 30px;
 }
 
 .indexbuttons>a{
   color: #FFF;
-  font-family: Oswald;
+  font-family: Play;
   font-size: 20px;
   margin: 15px;
 }
@@ -50,7 +50,7 @@ body{
 .wordbuttons>p{
   float:right;
   color: #FFF;
-  font-family: Oswald;
+  font-family: Play;
   font-size: 20px;
   margin-right: 30px;
 }
@@ -105,10 +105,12 @@ body{
   float:left;
   margin-left: 10px;
   width: 85%;
+  font-size: 14px;
 }
 
 .entryTEXT>a{
   color: #380744;
+  font-size: 16px;
 }
 
 

@@ -1,10 +1,12 @@
 <html ng-app="vote">
 <head>
   <title>Dragg!</title>
-  <link rel="stylesheet" href="bootstrap.min.css">
-  <link rel="stylesheet" href="index.css" media="screen">
+   <link rel="stylesheet" href="bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Audiowide|Play|Russo+One" rel="stylesheet">
+  <link rel="stylesheet" href="index.css" media="screen">
 </head>
 <body>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
@@ -37,10 +39,17 @@
 <div class="appBody">
 
 <div class='sectionTitle'>
-    Events I'm going to:
+    Bars I'm going to:
 </div>
 <div class='myEvents'>
-    
+<% data.forEach(function(a){%>
+       
+       <ul>
+               <li><a href="javascript:window.open('bar?name=<%=a%>','<%=a%>','width=600,height=400')"><%=a%></a></li>
+         
+       </ul>
+       
+   <% }) %>    
 </div>
 
 </div>

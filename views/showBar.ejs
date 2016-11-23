@@ -1,0 +1,118 @@
+<html ng-app="vote">
+<head>
+  <title>Dragg!</title>
+ <link rel="stylesheet" href="bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Audiowide|Play|Russo+One" rel="stylesheet">
+  <link rel="stylesheet" href="index.css" media="screen">
+</head>
+<body>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script>
+    
+    $(document).ready(function(){
+       
+       var data = '<%=data.attendance.length%>';
+       $('#attendance').html(data);
+       
+       
+           
+       var attend = <%=attending%>;
+       
+       if (attend == true){
+                
+                
+                $('#going').html("You're attending this event");
+                $('#attend').attr('style', 'background-color: red')
+                $('#attend').html('cancel');
+            }
+            
+       else if (attend == false){
+                
+                $('#going').html("");
+                $('#attend').attr('style', 'background-color: green')
+                $('#attend').html('attend');
+            }  
+           
+       
+       
+     
+      
+       
+        
+        $('#attend').on('click', function(){
+            
+            var currentBar = window.location.href;
+            
+             $.post(currentBar, function(){
+                 <% if (!user) {%>
+                 window.location.href = '/login';
+                 <% } %>
+             });
+            
+            if (!attend){
+                attend = true;
+                
+                $('#going').html("You're attending this event");
+                $('#attend').attr('style', 'background-color: red')
+                $('#attend').html('cancel');
+                data++;
+                $('#attendance').html(data);
+            }
+            
+            else if (attend){
+                attend = false;
+                $('#going').html("");
+                $('#attend').attr('style', 'background-color: green')
+                $('#attend').html('attend');
+                data--;
+                $('#attendance').html(data);
+            }
+            
+        })
+        
+        
+    });
+    
+</script>
+
+
+
+
+
+<div class="appBody">
+<center>
+
+
+
+<div class='searchResult'>
+    
+   
+       
+       <div class='entry'>
+           <div id='going'></div>
+           <div class='entryIMG'><img src='<%=data.img%>'></div>
+           <div class='entryTEXT'>
+               <a target='_blank' href='<%=data.url%>'><b><%=data.name%></a></b>
+               <img src='<%=data.rating_img_url_small%>'><br>
+               <%=data.address%> - <%=data.zipcode%> (<%=data.phone%>)<br>
+               <%=data.snippet%><br>
+               <p id='attendance'></p> people are going<br>
+               <button style='background-color:green'id='attend'></button>
+           </div>
+       </div>
+       
+   
+
+</center>
+</div>
+
+<br><br>
+</div>
+
+
+
+</body>
+</html>

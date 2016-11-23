@@ -19,39 +19,14 @@ app.get('/', function(request, response){
 
 app.get('/home',  isLoggedIn, function(request, response){
  
+ var attending = request.user['Attending'];
+ 
+ 
+ 
   
-var user = request.user.local.username;
-var pollList = [];
-
-var findDocuments = function(db, callback) {
-  var collection = db.collection('polls');
-  collection.find({"user":user}).toArray(function(err, docs) {
-    assert.equal(err, null);
-    console.log("Found the following records");
-    console.log(docs);
-    callback(docs);
-    pollList = docs;
-        response.render('home.ejs', {
-            user : request.user, data: pollList
+ response.render('home.ejs', {
+            user : request.user, data: attending
         }); 
-  });        
-};
-
-var url = process.env.MONGO_URL;
-  
-  
-    MongoClient.connect(url, function(err, db) {
-    assert.equal(null, err);
-    console.log("Connected successfully to get server");
-
-    findDocuments(db, function() {
-    db.close();
-  
-  });
-    });
-    
-
-   
 
     
    
@@ -100,6 +75,7 @@ app.post('/bars', isLoggedIn, function(request, response){
   var collection = db.collection('users');
   collection.updateOne({_id:userId}, {$set: {location:location}});
   console.log("User location updated");
+  response.redirect('/bars');
   
 };
 });
