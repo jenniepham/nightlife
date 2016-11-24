@@ -110,7 +110,7 @@ button{
 
 .entry{
   
-  width: 65%;
+  width: 75%;
   height: 150px;
   text-align: left;
   
@@ -240,6 +240,89 @@ input[type=password] {
   color: red;
 }
 
+@media screen and (max-width: 1500px) {
+  
+.appBody{
+  width:80%;
+}
+
+.entry{
+  
+  width: 80%;
+  
+}
+
+  
+}
+
+@media screen and (max-width: 1200px) {
+  
+.appBody{
+  width:90%;
+}
+
+.entry{
+  
+  width: 90%;
+  
+}
+
+  
+}
+
+@media screen and (max-width: 950px) {
+  
+.appBody{
+  width:90%;
+}
+
+.entry{
+  
+  width: 100%;
+  
+}
+
+  
+}
+
+@media screen and (max-width: 850px) {
+  
+.appBody{
+  width:90%;
+}
+
+.entry{
+  
+  width: 100%;
+  
+}
+
+.entryTEXT{
+
+  width: 75%;
+
+}
+  
+}
+
+@media screen and (max-width: 700px) {
+  
+.entry{
+  text-align: center;
+}
+  
+.entryIMG{
+  float:none;
+}
+
+.entryTEXT{
+  margin-left: 0px;
+  width: 100%;
+
+}
+  
+}
+
 @media screen and (max-width: 600px) {
   
  .banner{
@@ -247,6 +330,23 @@ input[type=password] {
   width: 400px;
   height: 320px;
 } 
+
+.wordbuttons>a{
+  font-size: 14px;
+  margin-right: 15px;
+}
+
+.indexbuttons>a{
+
+  font-size: 14px;
+
+}
+
+.wordbuttons>p{
+  font-size: 14px;
+
+}
+
   
 }
 
