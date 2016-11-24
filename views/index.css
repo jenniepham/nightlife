@@ -12,7 +12,7 @@ body{
   margin: 0px auto;
   width: 70%;
   height: 100%;
-  transform: translateY(5px);
+  transform: translateY(10px);
 
 }
 
@@ -27,14 +27,14 @@ body{
 
 .wordbuttons>a{
   color: #FFF;
-  font-family: Play;
+  font-family: Baloo Bhaina;
   font-size: 20px;
   margin-right: 30px;
 }
 
 .indexbuttons>a{
   color: #FFF;
-  font-family: Play;
+  font-family: Baloo Bhaina;
   font-size: 20px;
   margin: 15px;
 }
@@ -50,7 +50,7 @@ body{
 .wordbuttons>p{
   float:right;
   color: #FFF;
-  font-family: Play;
+  font-family: Baloo Bhaina;
   font-size: 20px;
   margin-right: 30px;
 }
@@ -60,13 +60,32 @@ body{
   transform: translateY(80px);
   width: 70%;
   height: auto;
-  color: #555555;
-  font-family: Lato;
+  color: #666;
+  font-family: Ubuntu;
   font-size: 18px;
 }
 
+.showBar{
+
+  margin: 0px auto;
+  transform: translateY(30px);
+  width: 550px;
+  color: #666;
+  font-family: Ubuntu;
+  font-size: 18px;
+
+}
+
+input:focus{
+  outline-color: #dfa0ef;
+}
+
+button{
+  outline-color: #dfa0ef;
+}
+
 .indexText{
-  color: #380744;
+  color: #712481;
 }
 
 #logo{
@@ -108,11 +127,118 @@ body{
   font-size: 14px;
 }
 
+.barTEXT{
+  width: 95%;
+  font-size: 14px;
+}
+
+.barTEXT>a{
+  color: #712481;
+  font-size: 20px;
+}
+
+
+
 .entryTEXT>a{
   color: #380744;
   font-size: 16px;
 }
 
+.loginForm{
+  margin-top: 20px;
+  width: 320px;
+  height: 310px;
+
+  
+}
+
+.loginTitle{
+  font-size: 30px;
+  color: #380744;
+  font-family: Signika;
+  transform: translateY(15px);
+}
+
+.input{
+  width: 300px;
+  border-radius: 20px;
+
+}
+
+.input>input{
+  width: 300px;
+  height: 50px;
+  transform: translateY(10px);
+  background-color: #FFF;
+  border: solid 1px #BBB;
+  color: #380744;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px #FFF inset;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 0px 10px;
+    margin: 8px 0;
+
+}
+
+input[type=password] {
+    width: 100%;
+    padding: 0px 10px;
+    margin: 8px 0;
+
+}
+
+#draggButton{
+  
+  background-color: #712481;
+  color: #FFF;
+  border: solid 1px #712481;
+  
+}
+
+#searchLoc{
+  width: 50%;
+}
+
+#userLoc{
+  width: 50%;
+}
+
+.userLoc{
+  background-color: #712481;
+  color: #FFF;
+  border: solid 1px #712481;
+}
+
+.loginSubmit{
+  width: 300px;
+  background-color: #712481;
+  border: solid 2px #712481;
+  color: #FFF;
+  border-radius: 5px;
+}
+
+#attendance{
+  font-size: 16px;
+  color: #712481;
+  font-weight: bold;
+}
+
+#attend{
+  width: 100px;
+  border: none;
+  color: #FFF;
+}
+
+#going{
+  color: red;
+}
 
 @media screen and (max-width: 600px) {
   

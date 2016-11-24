@@ -3,10 +3,8 @@
 <head>
     <title>Dragg!</title>
   <link rel="stylesheet" href="bootstrap.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Audiowide|Play|Russo+One" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaina|Signika|Ubuntu" rel="stylesheet">
   <link rel="stylesheet" href="index.css" media="screen">
 </head>
 <body>
@@ -37,18 +35,19 @@
         <div class="alert alert-danger"><%= SUmessage %></div>
     <% } %>
 <div class="appBody">
-    
- <div class="loginForm"><center>
-   <p class="signupTitle">sign up <i class="fa fa-level-up" aria-hidden="true"></i> </p>
+    <center>
+ <div class="loginForm">
+   <p class="loginTitle">sign up</p>
    <form method="post" action="" id="newUserForm">
-     <p class="subtext"><b>Username</b></p>
-     <input class="loginInput" type="text" name="username"></input><br><br>
-     <p class="subtext"><b>Password</b></p>
-     <input class="loginInput" type="password" name="password"></input><br><br>
+       <div class='input'>
+     <input class="loginInput" type="text" name="username" placeholder='username'></input>
+     <input class="loginInput" type="password" name="password" placeholder='password'></input><br><br>
+     </div>
      <input class="loginSubmit" type="submit" value="Register"></input>
-   </form></center>
+   </form>
+   <p><center>Already have an account? <a href='/login'>Log in!</a></center></p>
  </div>
-
+</center>
 </div>
 
 

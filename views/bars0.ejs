@@ -1,11 +1,9 @@
 <html ng-app="vote">
 <head>
   <title>Dragg!</title>
-  <link rel="stylesheet" href="bootstrap.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+   <link rel="stylesheet" href="bootstrap.min.css">
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Audiowide|Play|Russo+One" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaina|Merriweather|Ubuntu" rel="stylesheet">
   <link rel="stylesheet" href="index.css" media="screen">
 </head>
 <body>
@@ -39,17 +37,13 @@
 <div class="appBody">
 
 <div class='sectionTitle'>
-    <% if (user.location) {%>
-    Local bars in
-    <b><%=user.location%></b>
-    <% } %>
-    <% if (!user.location) {%>
+    <center>
     <form method='post' action=''>
         Enter your location to view bars in your area<br>
-    <input name='locationInput' type='text'></input>
-    <input type='submit' value='submit'></input>
+    <input  id='userLoc' name='locationInput' type='text'></input>
+    <input class='userLoc' type='submit' value='submit'></input>
     </form>
-    <% } %>
+   </center>
 </div>
 
 

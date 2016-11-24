@@ -2,10 +2,8 @@
 <head>
   <title>Dragg!</title>
  <link rel="stylesheet" href="bootstrap.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Audiowide|Play|Russo+One" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaina|Merriweather|Ubuntu" rel="stylesheet">
   <link rel="stylesheet" href="index.css" media="screen">
 </head>
 <body>
@@ -13,11 +11,13 @@
 <script>
     
     $(document).ready(function(){
-       
+       var list = '<%=data.attendance%>';
        var data = '<%=data.attendance.length%>';
-       $('#attendance').html(data);
+       $('#attendance').html('going : ' + data);
        
-       
+       if (data > 0){
+           $('#attendanceList').html('members : ' + list);
+       }
            
        var attend = <%=attending%>;
        
@@ -32,7 +32,7 @@
        else if (attend == false){
                 
                 $('#going').html("");
-                $('#attend').attr('style', 'background-color: green')
+                $('#attend').attr('style', 'background-color: #712481')
                 $('#attend').html('attend');
             }  
            
@@ -59,16 +59,16 @@
                 $('#attend').attr('style', 'background-color: red')
                 $('#attend').html('cancel');
                 data++;
-                $('#attendance').html(data);
+                $('#attendance').html('going : ' + data);
             }
             
             else if (attend){
                 attend = false;
                 $('#going').html("");
-                $('#attend').attr('style', 'background-color: green')
+                $('#attend').attr('style', 'background-color: #712481')
                 $('#attend').html('attend');
                 data--;
-                $('#attendance').html(data);
+                $('#attendance').html('going : ' + data);
             }
             
         })
@@ -82,34 +82,30 @@
 
 
 
-<div class="appBody">
+<div class="showBar">
 <center>
 
 
-
-<div class='searchResult'>
-    
-   
-       
-       <div class='entry'>
-           <div id='going'></div>
-           <div class='entryIMG'><img src='<%=data.img%>'></div>
-           <div class='entryTEXT'>
+      
+           
+           <img src='<%=data.img%>'><br><br>
+           <div class='barTEXT'>
                <a target='_blank' href='<%=data.url%>'><b><%=data.name%></a></b>
-               <img src='<%=data.rating_img_url_small%>'><br>
-               <%=data.address%> - <%=data.zipcode%> (<%=data.phone%>)<br>
-               <%=data.snippet%><br>
-               <p id='attendance'></p> people are going<br>
+               <img src='<%=data.rating%>'><br>
+               <%=data.address%> - <%=data.zipcode%> (<%=data.phone%>)<br><br>
+               "<%=data.snippet%>"<br><br>
+               <p id='attendance'></p>
+               <p id='attendanceList'></p>
+               <div id='going'></div><br>
                <button style='background-color:green'id='attend'></button>
            </div>
-       </div>
+       
        
    
 
 </center>
-</div>
 
-<br><br>
+
 </div>
 
 

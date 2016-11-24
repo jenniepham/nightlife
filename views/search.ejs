@@ -1,11 +1,9 @@
 <html ng-app="vote">
 <head>
   <title>Dragg!</title>
-   <link rel="stylesheet" href="bootstrap.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+ <link rel="stylesheet" href="bootstrap.min.css">
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Audiowide|Play|Russo+One" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaina|Merriweather|Ubuntu" rel="stylesheet">
   <link rel="stylesheet" href="index.css" media="screen">
 </head>
 <body>
@@ -50,7 +48,7 @@
        <div class='entry'>
            <div class='entryIMG'><img src='<%=a.image_url%>'></div>
            <div class='entryTEXT'>
-               <a target='_blank' href='<%=a.url%>'><b><%=a.name%></a></b> <a href="javascript:window.open('bar?name=<%=a.name%>','<%=a.name%>','width=600,height=400')"><i class="fa fa-plus-square" aria-hidden="true"></i></a><br> 
+               <a target='_blank' href='<%=a.url%>'><b><%=a.name%></a></b> <a href="javascript:window.open('bar?name=<%=a.name%>','<%=a.name%>','width=600,height=450')"><i class="fa fa-plus-square" aria-hidden="true"></i></a><br> 
                <img src='<%=a.rating_img_url_small%>'><br>
                <%=a.location.address%> - <%=a.location['postal_code']%> (<%=a.phone%>)<br>
                <%=a['snippet_text']%>
